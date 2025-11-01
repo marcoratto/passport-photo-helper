@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Passport Photo Helper</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Passport Photo Helper</h1>
+
+  <div class="container">
+    <div class="controls">
+      <label>Carica immagine:
+        <input type="file" id="fileInput" accept="image/*">
+      </label>
+
+      <div class="buttons">
+        <label><input type="radio" name="point" value="topHead" checked> Parte alta della testa (Y)</label>
+        <label><input type="radio" name="point" value="bottomHead"> Parte bassa della testa (Y)</label>
+        <label><input type="radio" name="point" value="eyes"> Posizione degli occhi (Y)</label>
+        <label><input type="radio" name="point" value="nose"> Posizione del naso (X)</label>
+      </div>
+
+      <div id="canvasContainer">
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="actions">
+        <button id="clearAll">Clear all</button>
+        <button id="exportJSON">Export JSON</button>
+        <button id="exportCSV">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="coords">
+      <h2>Coordinate</h2>
+      <table>
+        <thead><tr><th>Punto</th><th>X</th><th>Y</th><th></th></tr></thead>
+        <tbody id="coordTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
